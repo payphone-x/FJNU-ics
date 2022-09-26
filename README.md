@@ -2,9 +2,9 @@
 
 **福建师范大学课表自动生成工具，可显示上课地点，教师名称，兼容各种日历APP**
 
-如果你是重庆邮电大学学生，请访问 [CQUPT-ics](https://github.com/qwqVictor/CQUPT-ics) 项目，可自动生成学生课表。
+- 如果你是重庆邮电大学学生，请访问 [CQUPT-ics](https://github.com/qwqVictor/CQUPT-ics) 项目，可自动生成学生课表。
 
-如果你不是上述两所大学的学生，请访问 [python-ical-timetable](https://github.com/junyilou/python-ical-timetable) 项目，可手动生成学生课表。
+- 如果你不是上述两所大学的学生，请访问 [python-ical-timetable](https://github.com/junyilou/python-ical-timetable) 项目，可手动生成学生课表。
 
 ![](https://dd-static.jd.com/ddimg/jfs/t1/106877/39/31263/220749/63318b08E88081b5d/53802855ccb54e8b.png)
 
