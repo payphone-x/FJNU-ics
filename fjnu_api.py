@@ -31,7 +31,7 @@ class FJNUApi:
                 _weeks = [ int(i) for i in range(int(_weeks[0]), int(_weeks[1]) + 1) ]
             else:
                 _weeks = [ int(parse.parse("{}周", it['zcd'])[0]) ]
-            # 我囸你妈
+            # 写后端的傻逼我囸你妈
             res.append({
                 "name": it['kcmc'],
                 "teacher": it['xm'],
