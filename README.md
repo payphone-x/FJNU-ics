@@ -30,7 +30,7 @@
 
 1. 在项目目录中运行`pip install -r requirements.txt`
 
-2. 在浏览器(建议Chrome或Firefox)中登录FJNU官网并打开课表查询页面，复制课表查询页面的链接
+2. 在浏览器（建议使用 Chrome 或 Firefox）中登录[FJNU教务系统](https://jwglxt.fjnu.edu.cn/jwglxt/xtgl/login_slogin.html)并打开课表查询页面，复制课表查询页面的链接
 
 3. 在项目目录中运行`python main.py`
 
