@@ -6,8 +6,12 @@ import parse
 
 cal = ics.Calendar()
 
-class_time = [None, (8, 20), (9, 15), (10, 20), (11, 15), (14, 0), (14, 55), 
-	(15, 50), (16, 45), (18, 30), (19, 25), (20, 20), (21, 15)]
+class_time = {
+    "旗山校区": [None, (8, 20), (9, 15), (10, 20), (11, 15), (14, 0), (14, 55), 
+	    (15, 50), (16, 45), (18, 30), (19, 25), (20, 20), (21, 15)],
+    "仓山校区": [None, (8, 00), (8, 55), (10, 00), (10, 55), (14, 0), (14, 55), 
+	    (15, 50), (16, 45), (18, 30), (19, 25), (20, 20), (21, 15)]
+}
 
 duration_per_class = 45
 
@@ -38,16 +42,17 @@ for day in range(1, 366):
     if day % 7 == 1:
         week_index += 1
     for it in data:
+        campus = it['campus']
         if week_index in it['weeks'] and ((day - 1) % 7 + 1) == it['weekday_order']:
             e = ics.Event()
             e.name = it['name']
             e.begin = str(current_time + datetime.timedelta(
-                hours = class_time[it['class_order'][0]][0] - 8,
-                minutes = class_time[it['class_order'][0]][1]
+                hours = class_time[campus][it['class_order'][0]][0] - 8,
+                minutes = class_time[campus][it['class_order'][0]][1]
             ))
             e.end = str(current_time + datetime.timedelta(
-                hours = class_time[it['class_order'][-1]][0] - 8,
-                minutes = class_time[it['class_order'][-1]][1]
+                hours = class_time[campus][it['class_order'][-1]][0] - 8,
+                minutes = class_time[campus][it['class_order'][-1]][1]
             ) + datetime.timedelta(minutes=duration_per_class))
             e.location = it['location']
             e.description = it['teacher'] + ' - ' + it['class_id']

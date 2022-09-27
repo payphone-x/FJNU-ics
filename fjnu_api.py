@@ -47,6 +47,7 @@ class FJNUApi:
                 "class_id": it['cd_id'],
                 "weeks": _weeks,
                 "weekday_order": int(it['xqj']),
-                "class_order": _class
+                "class_order": _class,
+                "campus": it['xqmc']
             })
         return res
