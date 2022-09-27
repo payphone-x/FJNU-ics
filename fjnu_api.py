@@ -19,14 +19,14 @@ class FJNUApi:
 
     def fetch(this):
         res = requests.post(this.url, headers=this.headers, data=this.body, cookies=this.cookies)
-        raw = res.content
-        this.content = json.loads(raw)['kbList']
+        this.content = json.loads(res.content)['kbList']
 
     def parse(this):
         res = []
         for it in this.content:
             _class = parse.parse("{}-{}", it['jcs'])
             _class = list(range(int(_class[0]), int(_class[1]) + 1))
+            
             _weeks = []
             for s in it['zcd'].split(','):
                 s = s.strip()
@@ -37,14 +37,13 @@ class FJNUApi:
                 elif re.search("\d*周", s):
                     _ = parse.parse("{}周", s)
                     _weeks.append(int(_[0]))
+            
             # 写后端的傻逼我囸你妈
+
             res.append({
                 "name": it['kcmc'],
                 "teacher": it['xm'],
-                "mandatory": True,
-                "weeks_str": it['zcd'],
                 "location": it['cdmc'],
-                "class_id": it['cd_id'],
                 "weeks": _weeks,
                 "weekday_order": int(it['xqj']),
                 "class_order": _class,

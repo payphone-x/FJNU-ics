@@ -55,7 +55,7 @@ for day in range(1, 366):
                 minutes = class_time[campus][it['class_order'][-1]][1]
             ) + datetime.timedelta(minutes=duration_per_class))
             e.location = it['location']
-            e.description = it['teacher'] + ' - ' + it['class_id']
+            e.description = '授课教师: ' + it['teacher']
             cal.events.add(e)
     current_time += datetime.timedelta(days=1)
 
