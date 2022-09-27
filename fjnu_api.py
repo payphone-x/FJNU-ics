@@ -1,6 +1,7 @@
 import requests
 import json
 import parse
+import re
 
 class FJNUApi:
     def __init__(this, url_suffix, cookie, body):
@@ -26,11 +27,16 @@ class FJNUApi:
         for it in this.content:
             _class = parse.parse("{}-{}", it['jcs'])
             _class = list(range(int(_class[0]), int(_class[1]) + 1))
-            _weeks = parse.parse("{}-{}周", it['zcd'])
-            if _weeks != None:
-                _weeks = [ int(i) for i in range(int(_weeks[0]), int(_weeks[1]) + 1) ]
-            else:
-                _weeks = [ int(parse.parse("{}周", it['zcd'])[0]) ]
+            _weeks = []
+            for s in it['zcd'].split(','):
+                s = s.strip()
+                if re.search("\d*-\d*周",s):
+                    _ = parse.parse("{}-{}周", s)
+                    for i in range(int(_[0]), int(_[1]) + 1):
+                        _weeks.append(i)
+                elif re.search("\d*周", s):
+                    _ = parse.parse("{}周", s)
+                    _weeks.append(int(_[0]))
             # 写后端的傻逼我囸你妈
             res.append({
                 "name": it['kcmc'],
