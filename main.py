@@ -11,22 +11,17 @@ class_time = [None, (8, 20), (9, 15), (10, 20), (11, 15), (14, 0), (14, 55),
 
 duration_per_class = 45
 
-print("This program reads data from local browsers to restore login sessions.")
-print("It is suggested that you use Chrome or Firefox.")
-print("It is promised that your browser cookies are used only for generating ics file.")
-print("Proceeding means that you have understood about possible consequences.")
-
-lnk = input("Full link=")
+lnk = input("Link=")
 
 suffix = parse.parse("https://jwglxt.fjnu.edu.cn/jwglxt/kbcx/xskbcx_cxXskbcxIndex.html?{}", lnk)[0]
 
 yr = input("Year=")
-st = [None, 3, 12, 16][int(input("Semester(1|2|3)="))]
+st = [None, 3, 12, 16][int(input("Semester="))]
 
 api = fjnu_api.FJNUApi(
     suffix,
     browser_cookie3.load('jwglxt.fjnu.edu.cn'),
-    'xnm=%s&xqm=%s&kzlx=ck' % (yr, st)
+    'xnm=%s&xqm=%d&kzlx=ck' % (yr, st)
 )
 
 print("Sending POST request...")
