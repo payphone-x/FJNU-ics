@@ -6,7 +6,7 @@
 
 - 如果你不是上述两所大学的学生，请访问 [python-ical-timetable](https://github.com/junyilou/python-ical-timetable) 项目，可手动生成学生课表。
 
-![](https://dd-static.jd.com/ddimg/jfs/t1/120873/30/29967/39374/6331b2f2E72670d83/360f0e76dccc634d.png)
+![](/doc/images/preview.png)
 
 
 -------------------
@@ -26,7 +26,7 @@
 - 本代码需使用 **Python 3** 运行，建议 Python 版本在 3.7 以上。
 - 本代码使用了`browsercookie`读取浏览器的Cookies数据，请确保您的浏览器在其支持范围以内(推荐Google Chrome，Edge，Firefox等主流浏览器)
 
-关于 Python 3 的具体配置方法请见[教程]()
+关于 Python 3 的具体配置方法请见[教程](/doc/python_configuration.md)
 
 ## 生成ics文件
 
