@@ -42,7 +42,7 @@ def requirements():
 | :-: | :-: | :-: | :-: |
 | `name` | `str` | 课程名称 | `'高等数学'` |
 | `teacher` | `str` | 教师姓名 | `'田所浩二'` |
-| `location` | `str` | 上课地点 | `下北泽` |
+| `location` | `str` | 上课地点 | `'下北泽'` |
 | `weeks` | `list[int]` | 需要上这一门课的所有周，每一周对应一个元素 | `[4, 5, 6]` |
 | `weekday_order` | `int` | 这一门课位于周几 | `2` |
 | `class_order` | `list[int]` | 第几节课 | `[3, 4]` |
