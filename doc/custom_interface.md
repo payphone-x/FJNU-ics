@@ -38,17 +38,17 @@ def requirements():
 
 该函数用于获取并解析数据，返回值中的每一项都应具有以下键值：
 
-| Key | Type | Descr. |
-| :-: | :-: | :-: |
-| `name` | `str` | 课程名称 |
-| `teacher` | `str` | 教师姓名 |
-| `location` | `str` | 上课地点 |
-| `weeks` | `list[int]` | 需要上这一门课的所有周，每一周对应一个元素 |
-| `weekday_order` | `int` | 这一门课位于周几 |
-| `class_order` | `int` | 第几节课 |
-| `time` | `dict` | 上课时间，见下 |
-| `time['from']` | `tuple[int, int]` | 课程起始时间，\[0\]为小时，\[1\]为分钟 |
-| `time['to']` | `tuple[int, int]` | 课程结束时间，\[0\]为小时，\[1\]为分钟 |
+| Key | Type | Descr. | Example |
+| :-: | :-: | :-: | :-: |
+| `name` | `str` | 课程名称 | `'高等数学'` |
+| `teacher` | `str` | 教师姓名 | `'田所浩二'` |
+| `location` | `str` | 上课地点 | `下北泽` |
+| `weeks` | `list[int]` | 需要上这一门课的所有周，每一周对应一个元素 | `[4, 5, 6]` |
+| `weekday_order` | `int` | 这一门课位于周几 | `2` |
+| `class_order` | `list[int]` | 第几节课 | `[3, 4]` |
+| `time` | `dict` | 上课时间，见下 | - |
+| `time['from']` | `tuple[int, int]` | 课程起始时间，\[0\]为小时，\[1\]为分钟 | `(8, 0)` |
+| `time['to']` | `tuple[int, int]` | 课程结束时间，\[0\]为小时，\[1\]为分钟 | `(9, 35)` |
 
 ## 修改程序
 

@@ -1,8 +1,6 @@
 import datetime
 import ics
 import fjnu_api
-import browser_cookie3
-import parse
 
 cal = ics.Calendar()
 
