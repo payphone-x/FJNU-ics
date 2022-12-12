@@ -115,9 +115,12 @@ Update: 开发者在课表后端返回数据中发现了指示校区的部分，
 我们只保证本repo中的文件遵守上述规则，若您得到的文件并非与本repo完全一致，则需您自行承担可能的风险与后果  
 使用此程序即代表您了解并同意以上条件  
 
+
+
 # 联系我们
 
 - 直接提交issue
 - telegram：[@MoveToEx](https://t.me/MoveToEx)，[@Album.](https://t.me/album921)
+
 
 
